@@ -1,0 +1,44 @@
+.box {
+  $color: royalblue;
+  width: 200px;
+  height: 100px;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: $color;
+  &:hover {
+    background-color: darken($color, 10%);
+  }
+  &.built-in {
+    // mix(color1, color2)
+    // royalblue, red 색상이 혼합된 생상을 출력한다.
+    // background-color: mix($color, red);
+
+    // lighten(color, 10%)
+    // color를 10%만큼 더 밝게 만든 색상을 출력한다.
+    // background-color: lighten($color, 10%);
+
+    // darken(color, 10%)
+    // color를 10%만큼 더 어둡게 만든 색상을 출력한다.
+    // background-color: darken($color, 10%);
+
+    // saturate(color, 40%)
+    // color의 채도를 40% 올린 색상을 출력한다.
+    // background-color: saturate($color, 40%);
+
+    // desaturate(color, 40%)
+    // color의 채도를 40% 낮춘 색상을 출력한다.
+    // background-color: desaturate($color, 40%);
+
+    // grayscale(color)
+    // color값을 grayscale한 색상을 출력한다.
+    // background-color: grayscale($color);
+
+    // invert(color)
+    // color값을 반전 시킨 색상을 출력한다.
+    // background-color: invert($color);
+
+    // rgba(color, 0.5)
+    // color값의 투명도를 0.5를 만든 색상을 출력한다.
+    background-color: rgba($color, 0.5);
+  }
+}
