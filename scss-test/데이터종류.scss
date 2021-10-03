@@ -1,0 +1,45 @@
+$number: 1; // 0.5, 100px, 1em
+$string: bold; // relative, "../images/a.png"
+$color: red; // blue, #FFFF00, rgba(0,0,0,0.1)
+$boolean: true; // false
+$null: null;
+$list: orange, royalblue, yellow;
+$map: (
+  o: orange,
+  r: royalblue,
+  y: yellow,
+);
+
+@each $c in $list {
+  .box {
+    color: $c;
+  }
+}
+
+// 위 코드를 css로 변환하면,
+// .box {
+//   color: orange;
+// }
+// .box {
+//   color: royalblue;
+// }
+// .box {
+//   color: yellow;
+// }
+
+@each $key, $value in $map {
+  .box-#{$key} {
+    color: $value;
+  }
+}
+
+// 위 코드를 css로 변환하면,
+// .box-o {
+//   color: orange;
+// }
+// .box-r {
+//   color: royalblue;
+// }
+// .box-y {
+//   color: yellow
+// }
