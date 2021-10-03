@@ -1,0 +1,32 @@
+// 변수 (Variables)
+// 재활용이 가능한 용도로 사용한다. 문법은 아래와 같다.
+// 메인 색상을 미리 설정하여 사용할 수 있다.
+// 변수의 유효 범위는 js의 scope와 동일하다.
+// let 과 동일하게 재할당 가능!
+
+.container {
+  $size: 100px;
+  position: fixed;
+  top: $size;
+  .item {
+    $size: 50px;
+    width: $size;
+    height: $size;
+    transform: translateX($size);
+  }
+  // 위에서 재할당 된 값이 입력된다. 즉, 50px이 입력
+  left: $size;
+}
+
+// 위 코드를 css로 변환한다면,
+// .container {
+//   position: fixed;
+//   top: 100px;
+//   left: 50px;
+// }
+
+// .container .item {
+//   width: 50px;
+//   height: 50px;
+//   transform: translateX(50px);
+// }
