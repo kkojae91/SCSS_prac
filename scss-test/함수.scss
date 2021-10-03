@@ -1,0 +1,28 @@
+// mixin은 css 코드를 담아놓는 함수!
+@mixin center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// @function @return 함수 아래와 같이 작성하고 사용할 수 있다.
+@function ratio($size, $ratio) {
+  @return $size * $ratio;
+}
+
+.box {
+  $width: 100px;
+  width: $width;
+  // js 함수와 동일하게 사용하면 된다.
+  height: ratio($width, 1/2);
+  @include center;
+}
+
+// 위 코드를 css로 변환한다면,
+// .box {
+//   width: 100px;
+//   height: 50px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+// }
