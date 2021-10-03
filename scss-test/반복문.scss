@@ -1,0 +1,28 @@
+// js for문
+// for (let i = 0; i < 5; i++) {
+//   console.log(`loop-${i}`);
+// }
+
+// scope안에 내용이 총 5번 반복된다.
+@for $i from 1 through 5 {
+  .box:nth-child(#{$i}) {
+    width: 100px * $i;
+  }
+}
+
+// 위 코드를 css로 변환하면,
+// .box:nth-child(1) {
+//   width: 100px;
+// }
+// .box:nth-child(2) {
+//   width: 200px;
+// }
+// .box:nth-child(3) {
+//   width: 300px;
+// }
+// .box:nth-child(4) {
+//   width: 400px;
+// }
+// .box:nth-child(5) {
+//   width: 500px;
+// }
