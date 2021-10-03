@@ -1,0 +1,56 @@
+// & - 상위 (부모) 선택자 참조
+// 자신이 포함된 영역의 상위 선택자
+
+.btn {
+  position: absolute;
+  // &는 .btn을 의미
+  &.active {
+    color: red;
+  }
+}
+
+// 위코드를 css로 변환한다면.
+// .btn {
+//   position: absolute;
+// }
+
+// .btn.active {
+//   color: red;
+// }
+
+.list {
+  .li {
+    // &는 .li를 의미
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+// 위 코드를 css로 변환한다면,
+// .list .li:last-child {
+//   margin-right: 0;
+// }
+
+.fs {
+  &-small {
+    font-size: 12px;
+  }
+  &-medium {
+    font-size: 14px;
+  }
+  &-large {
+    font-size: 16px;
+  }
+}
+
+// 위 코드를 css로 변환한다면,
+// .fs-small {
+//   font-size: 12px;
+// }
+// .fs-medium {
+//   font-size: 14px;
+// }
+// .fs-large {
+//   font-size: 16px;
+// }
