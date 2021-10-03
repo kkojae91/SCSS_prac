@@ -1,0 +1,14 @@
+.container {
+  // 자식 선택자를 표기할 때는 css 와 동일하게 > 기호를 선택자 앞에 붙여주면 된다.
+  > ul {
+    li {
+      font-size: 40px;
+      .name {
+        color: royalblue;
+      }
+      .age {
+        color: orange;
+      }
+    }
+  }
+}
