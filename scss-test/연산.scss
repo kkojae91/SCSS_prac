@@ -1,0 +1,29 @@
+div {
+  width: 20px + 20px;
+  height: 40px - 10px;
+  font-size: 10px * 2;
+  // 나누기 속성을 css에서 단축속성으로 인식할 수 있기 때문에
+  // 변수를 사용해주거나, (30px / 2) 괄호를 사용해서 연산을 할 것이다는 의미를 부여하면
+  // / 나누기 연산이 정상적으로 수행된다.
+  margin: (30px / 2);
+  padding: 20px % 7;
+}
+
+// 위코드를 css로 변환한다면,
+// div {
+//   width: 40px;
+//   height: 30px;
+//   font-size: 20px;
+//   margin: 15px;
+//   padding: 6px;
+// }
+
+// 단위가 다른 연산을 하기 위해선 css에서와 동일하게 calc() 함수를 사용해주어야 한다.
+div {
+  width: calc(100% - 200px);
+}
+
+// 위 코드를 css로 변환한다면,
+// div {
+//   width: calc(100% - 200px);
+// }
