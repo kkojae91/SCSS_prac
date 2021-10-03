@@ -1,0 +1,11 @@
+// 동시에 여러개의 파일을 import 할 수 있다. 확장자가 있어도 되고 없어도 되고
+@import "./sub", "./sub2.scss";
+
+$color: royalblue;
+.container {
+  h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: $color;
+  }
+}
